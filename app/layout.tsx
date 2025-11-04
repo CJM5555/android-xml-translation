@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
 import Header from '@/components/Header';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://android-translation.vercel.app/';
@@ -49,6 +50,10 @@ export default function RootLayout({
                         <CssBaseline />
                         <Header />
                         {children}
+                        <Box component="footer" sx={{ textAlign: 'center', py: 1, fontSize: 12, color: 'text.secondary' }}>
+                            Check out the source code at:
+                            <a href="https://github.com/CJM5555/android-xml-translation" target="_blank" rel="noopener noreferrer">https://github.com/CJM5555/android-xml-translation</a>
+                        </Box>
                     </ThemeProvider>
                 </body>
             ) : (
@@ -56,6 +61,10 @@ export default function RootLayout({
                     <CssBaseline />
                     <Header />
                     {children}
+                    <Box component="footer" sx={{ textAlign: 'center', py: 1, fontSize: 12, color: 'text.secondary' }}>
+                        Check out the source code at:
+                        <a href="https://github.com/CJM5555/android-xml-translation" target="_blank" rel="noopener noreferrer">https://github.com/CJM5555/android-xml-translation</a>
+                    </Box>
                 </body>
             )}
         </html>
