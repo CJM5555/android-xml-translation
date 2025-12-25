@@ -46,6 +46,20 @@ export default function RootLayout({
         <html lang="en">
             <head>
                 <meta name="google-site-verification" content="P3RlTB9pjMDLt1iw8492kNzBgmnVhwJyr-I9sk4JW2E" />
+                {/* Google tag (gtag.js) */}
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5RN650C80"></script>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'G-R5RN650C80');
+                        `,
+                    }}
+                />
+                {/* Google AdSense */}
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1738524015819512" crossOrigin="anonymous"></script>
             </head>
             {isClient ? (
                 <body suppressHydrationWarning={true}>
